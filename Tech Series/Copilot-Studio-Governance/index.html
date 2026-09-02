@@ -41,7 +41,7 @@
   .hero {
     position: relative;
     overflow: hidden;
-    padding: 76px 0 84px;
+    padding: 44px 0 48px;
     background-color: #eef4ff;
     background-image:
       url("assets/hero.jpg"),
@@ -87,23 +87,9 @@
 
   .lede { max-width: 52ch; margin: 0; color: var(--body); font-size: 1rem; }
 
-  .draft {
-    max-width: 52ch;
-    margin: 24px 0 0;
-    padding: 10px 14px;
-    border-left: 3px solid var(--brand);
-    border-radius: 4px;
-    background: rgba(255,255,255,.66);
-    color: var(--body);
-    font-size: .85rem;
-  }
-
   /* ---------- Series ---------- */
 
-  .series { padding: 56px 0 88px; background: var(--band); }
-
-  h2 { margin: 0 0 6px; font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; }
-  .section-note { margin: 0 0 28px; color: var(--muted); font-size: .92rem; }
+  .series { padding: 36px 0 64px; background: var(--band); }
 
   .list { display: flex; flex-direction: column; gap: 20px; }
 
@@ -214,16 +200,24 @@
   .watch:hover { background: var(--brand-dark); color: #fff; }
   .watch[aria-disabled="true"] { background: #b8c2d0; pointer-events: none; }
 
-  /* ---------- Resources + footer ---------- */
+  /* ---------- Footer ---------- */
 
-  .resources { padding: 64px 0; }
-  .resources p { max-width: 68ch; color: var(--body); }
-
-  footer { padding: 28px 0 56px; border-top: 1px solid var(--border); color: var(--muted); font-size: .84rem; }
-  footer p { max-width: 78ch; margin: 0 0 10px; }
+  footer {
+    width: 100%;
+    padding: 28px 0 36px;
+    border-top: 1px solid var(--border);
+    background: var(--page);
+    color: var(--muted);
+    font-size: .8rem;
+  }
+  footer .wrap { max-width: none; }
+  footer p { width: 100%; margin: 0 0 10px; }
+  footer p:last-child { margin-bottom: 0; }
+  footer a { color: inherit; }
 
   @media (max-width: 720px) {
     .wrap { padding: 0 20px; }
+    .hero { padding: 36px 0 40px; }
     .card { flex-direction: column; }
     .thumb { flex: none; align-self: auto; aspect-ratio: 16 / 9; min-height: 0; }
     .thumb-num { font-size: 2.4rem; }
@@ -237,16 +231,12 @@
     <p class="eyebrow">7-Part Video Series</p>
     <h1>Copilot Studio Governance Series</h1>
     <p class="lede">A structured path from first principles to day-two operations: environments, licensing, DLP, identity, ALM, and monitoring. Watch the parts in order &mdash; each one builds on the last.</p>
-    <p class="draft"><strong>Draft.</strong> The remaining recordings, durations, and the part&nbsp;3&ndash;7 titles are placeholders awaiting confirmed content.</p>
   </div>
 </header>
 
 <main>
   <section class="series" id="episodes">
     <div class="wrap">
-      <h2>The full series</h2>
-      <p class="section-note">Follow parts 1 through 7 in sequence.</p>
-
       <div class="list">
 
         <article class="card">
@@ -387,20 +377,13 @@
       </div>
     </div>
   </section>
-
-  <section class="resources" id="resources">
-    <div class="wrap">
-      <h2>Related documentation</h2>
-      <p class="section-note">TBD &mdash; link the Microsoft Learn articles each part is grounded in.</p>
-      <p><a href="readme.md">Series readme</a> &nbsp;&middot;&nbsp; <a href="../readme.md">Back to the Tech Series catalog</a></p>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Product capabilities change over time. Confirm current behavior against Microsoft Learn documentation.</p>
-    <p>This material is educational and is not organization-specific legal, security, or compliance advice.</p>
+    <p><strong>Educational content only.</strong> This independent video series reflects the presenters&rsquo; understanding as of each recording date and is not official Microsoft product documentation, licensing guidance, legal advice, security advice, or compliance advice.</p>
+    <p>Microsoft products, services, features, availability, terminology, and licensing can change. Always verify current capabilities, requirements, limits, and licensing with the applicable official Microsoft documentation and licensing guides before making business, technical, procurement, security, or compliance decisions.</p>
+    <p>Content is provided &ldquo;as is,&rdquo; without warranties or guarantees of accuracy, completeness, or fitness for a particular purpose. Microsoft, Copilot, Copilot Studio, Power Platform, and related product names may be trademarks of Microsoft Corporation. Site source is available under the repository&rsquo;s <a href="../../LICENSE">MIT License</a>.</p>
   </div>
 </footer>
 
