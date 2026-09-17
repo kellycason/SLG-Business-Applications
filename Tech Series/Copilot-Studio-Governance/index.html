@@ -85,6 +85,30 @@
 
   .lede { max-width: 52ch; margin: 0; color: var(--body); font-size: 1rem; }
 
+  .series-details {
+    display: grid;
+    max-width: 760px;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 28px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(15,98,196,.2);
+  }
+
+  .series-detail-label {
+    margin: 0 0 4px;
+    color: var(--brand-dark);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+  }
+
+  .series-detail-copy { margin: 0; color: var(--body); font-size: .86rem; line-height: 1.5; }
+  .series-creators { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+  .series-creators li { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 8px; color: var(--body); font-size: .86rem; line-height: 1.5; }
+  .series-creators a { font-weight: 600; text-underline-offset: 2px; }
+
   /* ---------- Series ---------- */
 
   .series { padding: 36px 0 64px; background: var(--band); }
@@ -230,6 +254,8 @@
   @media (max-width: 720px) {
     .wrap { padding: 0 20px; }
     .hero { padding: 36px 0 40px; }
+    .hero::before { background: linear-gradient(180deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.9) 72%, rgba(255,255,255,.86) 100%); }
+    .series-details { grid-template-columns: 1fr; gap: 16px; }
     .card { height: auto; flex-direction: column; }
     .body { flex: none; height: 230px; }
     .thumb { flex: none; align-self: auto; aspect-ratio: 16 / 9; min-height: 0; }
@@ -243,6 +269,19 @@
     <p class="eyebrow">4-Part Video Series</p>
     <h1>Copilot Studio Governance Series</h1>
     <p class="lede">A practical series covering tenant settings, environment strategy, DLP policies, licensing, security roles, billing, and consumption.</p>
+    <div class="series-details" aria-label="Series guidance and contacts">
+      <div>
+        <p class="series-detail-label">Recommended viewing</p>
+        <p class="series-detail-copy">Watch this series in order to set up the minimum recommended configuration to prepare your tenant for Copilot Studio agent development and usage.</p>
+      </div>
+      <div>
+        <p class="series-detail-label">Created by</p>
+        <ul class="series-creators">
+          <li><span>Doug Bell</span><a href="mailto:Doug.Bell@microsoft.com">Doug.Bell@microsoft.com</a></li>
+          <li><span>Kelly Cason</span><a href="mailto:kellycason@microsoft.com">kellycason@microsoft.com</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>
 
