@@ -106,8 +106,7 @@
 
   .series-detail-copy { margin: 0; color: var(--body); font-size: .86rem; line-height: 1.5; }
   .series-creators { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
-  .series-creators li { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 8px; color: var(--body); font-size: .86rem; line-height: 1.5; }
-  .series-creators a { font-weight: 600; text-underline-offset: 2px; }
+  .series-creators li { color: var(--body); font-size: .86rem; line-height: 1.5; }
 
   /* ---------- Series ---------- */
 
@@ -147,6 +146,18 @@
   .thumb.video-three img,
   .thumb.video-four img {
     object-fit: contain;
+  }
+
+  .thumb::after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    bottom: -2px;
+    width: 36%;
+    aspect-ratio: 520 / 373;
+    background: url("assets/presenters-doug-kelly.png") right bottom / contain no-repeat;
+    filter: drop-shadow(0 3px 3px rgba(7,18,38,.24));
+    pointer-events: none;
   }
 
   .body {
@@ -277,8 +288,8 @@
       <div>
         <p class="series-detail-label">Created by</p>
         <ul class="series-creators">
-          <li><span>Doug Bell</span><a href="mailto:Doug.Bell@microsoft.com">Doug.Bell@microsoft.com</a></li>
-          <li><span>Kelly Cason</span><a href="mailto:kellycason@microsoft.com">kellycason@microsoft.com</a></li>
+          <li>Doug Bell</li>
+          <li>Kelly Cason</li>
         </ul>
       </div>
     </div>
